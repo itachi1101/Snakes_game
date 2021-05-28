@@ -1,0 +1,38 @@
+#mycanvas{
+    border: 20px solid green;
+    align-self: center;
+    background-image: url("Assets/bg.jpg");
+    
+}
+.canvas{
+   text-align: center;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+body{
+    background-color: black;
+}
+.intro{
+    background-color: #008891;
+    text-align: center;
+    padding: 1%;
+    margin-bottom: 3%;
+    color: #e7e7de;
+    font-size:medium;
+}
+.click{
+    transition-duration: 0.4s;
+    background-color: #e7e7e7; 
+    color: black;
+    border-radius: 12px;
+    font-size: 24px;
+}
+.click:hover {
+    background-color: red;
+    color: white;
+   
+  }

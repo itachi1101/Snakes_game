@@ -2,19 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Snake_Game</title>
-    <style >
-    #mycanvas{
-      border: 20px solid green;
-      
-      background-image: url("Assets/bg.jpg");
-    }
-    </style>
-
+    <link rel="stylesheet" href="styles.css">
+    <title>Snake Game</title>
   </head>
   <body>
-    <canvas id="mycanvas" width="300" height="300"></canvas>
+    <div class="intro"> <h1 class="heading">GAME ON</h1>
+    <button class="click">START</button></div>
+    <!-- <img id="gameover" src="Assets/gameover.jpg" alt=""> -->
+    <div class="canvas">
+    <canvas id="mycanvas"></canvas>
+
+    </div>
     <script src="snake.js" charset="utf-8"></script>
-    <h1>GAME ON</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>

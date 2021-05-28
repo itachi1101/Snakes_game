@@ -1,7 +1,16 @@
+var w=window.innerWidth;
+var h=window.innerHeight;
+
+let button=document.querySelector('.click');
+button.addEventListener('click',function(){
+	$(".intro").slideUp("slow");
+	init();
+	
+})
 function init(){
 	canvas = document.getElementById('mycanvas');
-	W = canvas.width =700;
-H  = canvas.height = 500;
+	W = canvas.width =w/1.2;
+    H  = canvas.height = h/1.2;
 	pen = canvas.getContext('2d');
 	cs = 66;
 	game_over = false;
@@ -16,7 +25,9 @@ H  = canvas.height = 500;
 	trophy.src = "Assets/trophy.png";
 
 	food = getRandomFood();
-
+	setTimeout(function(){
+		
+	})
 	snake = {
 		init_len:5,
 		color:"blue",
@@ -81,7 +92,8 @@ H  = canvas.height = 500;
 			var last_x = Math.round(W/cs);
 			var last_y = Math.round(H/cs);
 
-			if(this.cells[0].y<0 || this.cells[0].x < 0 || this.cells[0].x > last_x || this.cells[0].y > last_y){
+			if(this.cells[0].y<0 || this.cells[0].x < 0 || this.cells[0].x > last_x || this.cells[0].y > last_y)
+			{
 				game_over = true;
 			}
 
@@ -153,14 +165,15 @@ function getRandomFood(){
 
 function gameloop(){
 	if(game_over==true){
-		clearInterval(f);
-		alert("Game Over");
+		setTimeout(function(){
+			window.location.reload();
+		},5000);
 		return;
 	}
 	draw();
 	update();
 }
 
-init();
+// gameloop();
 
 var f = setInterval(gameloop,100);
