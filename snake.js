@@ -12,7 +12,7 @@ function init(){
 	W = canvas.width =w/1.2;
     H  = canvas.height = h/1.2;
 	pen = canvas.getContext('2d');
-	cs = 66;
+	cs = 65;
 	game_over = false;
 	score = 0;
 
@@ -25,9 +25,6 @@ function init(){
 	trophy.src = "Assets/trophy.png";
 
 	food = getRandomFood();
-	setTimeout(function(){
-		
-	})
 	snake = {
 		init_len:5,
 		color:"blue",
@@ -59,6 +56,7 @@ function init(){
 				console.log("Food eaten");
 				food = getRandomFood();
 				score++;
+				sound();
 
 			}
 			else
@@ -165,6 +163,7 @@ function getRandomFood(){
 
 function gameloop(){
 	if(game_over==true){
+		dsound();
 		setTimeout(function(){
 			window.location.reload();
 		},5000);
@@ -177,3 +176,11 @@ function gameloop(){
 // gameloop();
 
 var f = setInterval(gameloop,100);
+var x=document.getElementById("myaudio");
+function sound(){
+	x.play();
+}
+var diesound=document.getElementById("daudio");
+function dsound(){
+	diesound.play();
+}
