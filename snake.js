@@ -1,9 +1,11 @@
 var w=window.innerWidth;
 var h=window.innerHeight;
-
+let maintext=document.querySelector('.intro');
 let button=document.querySelector('.click');
 button.addEventListener('click',function(){
+	button.innerHTML="START";
 	$(".intro").slideUp("slow");
+    
 	init();
 	
 })
@@ -46,9 +48,6 @@ function init(){
 		},
 
 		updateSnake:function(){
-			//console.log("updating snake according to the direction property");
-			//check if the snake has eaten food, increase the length of the snake and
-			//generate new food object
 			var headX = this.cells[0].x;
 			var headY = this.cells[0].y;
 
@@ -86,7 +85,7 @@ function init(){
 
 			this.cells.unshift({x: nextX,y:nextY});
 
-			/*Write a Logic that prevents snake from going out*/
+		
 			var last_x = Math.round(W/cs);
 			var last_y = Math.round(H/cs);
 
@@ -100,7 +99,7 @@ function init(){
 	};
 
 	snake.createSnake();
-	//Add a Event Listener on the Document Object
+	//Add an Event Listener on the Document Object
 	function keyPressed(e){
 		//Conditional Statments
 		if(e.key=="ArrowRight"){
@@ -157,18 +156,19 @@ function getRandomFood(){
 		y:foodY,
 		color:"red",
 	}
-	return food
+	return food;
 
 }
 
 function gameloop(){
 	if(game_over==true){
-		dsound();
-		setTimeout(function(){
-			window.location.reload();
-		},5000);
+		maintext.innerHTML='😢😢 GAME OVER 😢😢 '
+		$(".intro").slideDown("fast");
+		button.innerHTML="TRY AGAIN";
+
 		return;
 	}
+
 	draw();
 	update();
 }

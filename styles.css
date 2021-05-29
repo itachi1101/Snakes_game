@@ -8,21 +8,23 @@
    text-align: center;
 }
 .center {
-    margin: auto;
+
     width: 50%;
     border: 3px solid green;
     padding: 10px;
   }
 body{
-    background-color: black;
+    background-color: #ffd56b;
 }
 .intro{
-    background-color: #008891;
+    background-color:#939b62; 
+    color: black;
     text-align: center;
-    padding: 1%;
-    margin-bottom: 3%;
-    color: #e7e7de;
-    font-size:medium;
+    padding-top: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;    
+    font-size: 3rem;
+    font-family: cursive ;
 }
 .click{
     transition-duration: 0.4s;
@@ -30,9 +32,13 @@ body{
     color: black;
     border-radius: 12px;
     font-size: 24px;
+    margin: 13px;
 }
 .click:hover {
     background-color: red;
     color: white;
    
   }
+.button{
+    text-align: center;
+}

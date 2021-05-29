@@ -6,19 +6,21 @@
     <title>Snake Game</title>
   </head>
   <body>
-    <div class="intro"> <h1 class="heading">GAME ON</h1>
-    <button class="click">START</button></div>
+   
+   <div class="intro">GAME ON</div>
+   <div class="button"> <button class="click">START</button></div>
+    <audio id="myaudio">
+      <source src="Assets/EatSound_CC0_by_EugeneLoza.ogg" type="audio/ogg">
+    </audio>
+    <audio id="daudio">
+      <source src="Assets/mixkit-spooky-game-over-1948.wav" type="audio/ogg">
+    </audio>
     <!-- <img id="gameover" src="Assets/gameover.jpg" alt=""> -->
     <div class="canvas">
     <canvas id="mycanvas"></canvas>
 
     </div>
-    <audio id="myaudio">
-      <source src="Assets/EatSound_CC0_by_EugeneLoza.ogg" type="audio/ogg">
-    </audio>
-    <audio id="daudio">
-      <source src="Assets/mixkit-sad-game-over-trombone-471.wav" type="audio/ogg">
-    </audio>
+  
     <script src="snake.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
