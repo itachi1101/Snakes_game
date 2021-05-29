@@ -174,7 +174,7 @@ function gameloop(){
 }
 
 // gameloop();
-
+///;lsasd;lfjsda;lfj
 var f = setInterval(gameloop,100);
 var x=document.getElementById("myaudio");
 function sound(){
