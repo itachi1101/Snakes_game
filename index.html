@@ -8,6 +8,7 @@
   <body>
    
    <div class="intro">GAME ON</div>
+   <div class="modal hidden"><h1 class="gover" >GAME OVER</h1><h1 class="gover">YOUR SCORE</h1><h2 class="score">0</h2><button class="restart" >TRY AGAIN </button></div>
    <div class="button"> <button class="click">START</button></div>
     <audio id="myaudio">
       <source src="Assets/EatSound_CC0_by_EugeneLoza.ogg" type="audio/ogg">
@@ -20,7 +21,7 @@
     <canvas id="mycanvas"></canvas>
 
     </div>
-  
+    <div class="overlay hidden"></div>
     <script src="snake.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>

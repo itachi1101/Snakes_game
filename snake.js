@@ -2,6 +2,10 @@ var w=window.innerWidth;
 var h=window.innerHeight;
 let maintext=document.querySelector('.intro');
 let button=document.querySelector('.click');
+let overlay=document.querySelector('.overlay');
+let modal=document.querySelector('.modal');
+let resetButton=document.querySelector('.restart');
+var score=0;
 button.addEventListener('click',function(){
 	button.innerHTML="START";
 	$(".intro").slideUp("slow");
@@ -159,13 +163,12 @@ function getRandomFood(){
 	return food;
 
 }
-
+let finalScore=document.querySelector('.score');
 function gameloop(){
 	if(game_over==true){
-		maintext.innerHTML='😢😢 GAME OVER 😢😢 '
-		$(".intro").slideDown("fast");
-		button.innerHTML="TRY AGAIN";
-
+		finalScore.innerHTML=score;
+		modal.classList.remove('hidden');
+		overlay.classList.remove('hidden');
 		return;
 	}
 
@@ -174,7 +177,7 @@ function gameloop(){
 }
 
 // gameloop();
-
+///;lsasd;lfjsda;lfj
 var f = setInterval(gameloop,100);
 var x=document.getElementById("myaudio");
 function sound(){
@@ -184,3 +187,8 @@ var diesound=document.getElementById("daudio");
 function dsound(){
 	diesound.play();
 }
+resetButton.addEventListener('click',function(){
+	modal.classList.add('hidden');
+	overlay.classList.add('hidden');
+	init();
+})
